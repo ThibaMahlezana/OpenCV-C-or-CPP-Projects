@@ -1,0 +1,10 @@
+cmake_minimum_required (VERSION 3.0)
+PROJECT (ReadImage)
+SET (CMAKE_CXX_STANDARD 11)
+
+# OpenCV package
+FIND_PACKAGE(OpenCV 4.0.0 REQUIRED)
+MESSAGE("[INFO] OpenCV version ${OpenCV_VERSION}")
+
+ADD_EXECUTABLE(${PROJECT_NAME} main.cpp)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${OpenCV_Libs} -lprotobuf)
