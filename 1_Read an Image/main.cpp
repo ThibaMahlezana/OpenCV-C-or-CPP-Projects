@@ -3,15 +3,15 @@
 #include <sstream>
 
 // OpenCV includes
-#include "opencv2/core.hpp"
-#include "opencv2/highgui.hpp"
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/core.hpp>
 
 using namespace std;
 using namespace cv;
 
 int main(){
     Mat color_img = imread("African_Art.jpg");
-    Mat grey_img = imread("African_Art.jpg", IMREAD_GREYSCALE);
 
     // Check if the image exist
     if(!color_img.data){
