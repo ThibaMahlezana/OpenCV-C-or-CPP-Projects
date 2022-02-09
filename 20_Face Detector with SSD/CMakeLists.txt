@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.0)
+PROJECT(FaceDetector)
+set(CMAKE_CXX_STANDARD 11)
+
+# Requires OpenCV
+FIND_PACKAGE(OpenCV 4 REQUIRED)
+
+ADD_EXECUTABLE(${PROJECT_NAME} main.cpp)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${OPENCV_LIBS} -lprotobuf)
